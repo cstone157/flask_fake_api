@@ -9,13 +9,14 @@ COPY ./app /app
 
 # Install Flask and other dependencies
 RUN pip install --no-cache-dir -r requirements.txt
-ENV FLASK_APP=flask-api.py
+#ENV FLASK_APP=flask-api.py
 ENV FLASK_ENV=development
 
-# Make port 8000 available for the app
-EXPOSE 8000
+# Make port 5000 available for the app
 EXPOSE 5000
 
 # Run the command to start the Flask app
-CMD ["flask", "run", "--host=0.0.0.0"]
+#CMD ["flask", "run", "--host=0.0.0.0"]
 #CMD ["python", "app.py"]
+#CMD ["flask", "--app", "run", "--host=0.0.0.0"]
+CMD ["flask", "--app", "server", "run"]

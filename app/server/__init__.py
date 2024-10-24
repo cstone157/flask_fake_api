@@ -1,6 +1,6 @@
 from flask import Flask
 
-from app import pages
+from server import pages
 
 def create_app():
     app = Flask(__name__)
