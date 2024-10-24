@@ -1,0 +1,9 @@
+services:
+  front-end:
+    build: .
+    image: cstone157/flask_front_end
+    volumes:
+    - ./app:/app
+    ports:
+    - 5000:5000
+    container_name: flask_front_end
